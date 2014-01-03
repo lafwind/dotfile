@@ -1,0 +1,57 @@
+"3.5 (created: 2012/08/04 00:41:20)
+
+source! /home/lafwind/.vimperatorrc.local
+
+" vim: set ft=vimperator:
+let mapleader = ","
+
+
+"""""""""""""""""""""""""
+""""""map
+"""""""""""""""""""""""""
+noremap <leader>gg :tabopen https://www.google.com/webhp?hl=en<CR>
+noremap <leader>gm :tabopen https://mail.google.com<CR>
+noremap <leader>gr :tabopen https://reader.google.com<CR>
+noremap <leader>yt :tabopen https://www.youtube.com<CR>
+noremap <leader>bd :tabopen http://www.baidu.com<CR>
+noremap <leader>fb :tabopen http://www.facebook.com<CR>
+noremap <leader>tt :tabopen http://www.twitter.com<CR>
+noremap <leader>nb :tabopen http://bbs.nju.edu.cn<CR>
+noremap <leader>sm :tabopen telnet://bbs.newsmth.net<CR>
+noremap <leader>fd :tabopen chrome://fastdial/content/fastdial.html<CR>
+noremap <leader>dw :tabopen http://www.dewen.org<CR>
+noremap <leader>pp :tabopen telnet://ptt.cc<CR>
+noremap <leader>jw :tabopen http://jw.nju.edu.cn<CR>
+noremap <leader>br :tabopen http://p.nju.edu.cn<CR>
+noremap <leader>yy :tabopen http://yyets.com<CR>
+noremap <leader>db :tabopen http://www.dropbox.com<CR>
+noremap <leader>db :tabopen http://www.github.com<CR>
+noremap <leader>ty :tabopen http://www.tianya.cn<CR>
+noremap <leader>os :tabopen http://cslab.nju.edu.cn/opsystem/#MainPage<CR>
+
+
+noremap zv :js io.run("c:\\program files (x86)\\Vim\\vim73\\gvim.exe")<CR>
+
+nnoremap j 6j
+nnoremap k 6k
+nnoremap h 6h
+nnoremap l 6l
+noremap gh gT
+noremap gl gt
+
+inoremap <A-h> <Left>
+inoremap <A-j> <Down>
+inoremap <A-k> <Up>
+inoremap <A-l> <Right>
+
+nnoremap <S-P> :set gui=notabs<CR>
+nnoremap <S-Q> :set gui=tabs<CR>
+noremap <leader>bk :set gui=bookmarks<CR>
+noremap <leader>ck :set gui=nobookmarks<CR>
+
+
+"ttern+=^下一页$
+"set previouspattern+=^上一页$
+set nextpattern=\s*下一页|下一頁|Next|next|下一章|下一张|下页|本主题下30篇\s*,\bnext\b,^>$,^>>$,\bmore\b
+set previouspattern=\s*上一页|上一頁|Preview|Prev|prev|Pre|pre|上一章|上一张|上页|本主题上30篇\s*,\bprev|previous\b,^<$,^<<$
+
