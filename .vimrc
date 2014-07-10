@@ -39,7 +39,7 @@ set ignorecase
 
 set cursorline
 "set textwidth=80
-"set colorcolumn=80
+set colorcolumn=80
 "set cursorcolumn
 "set lines=21 columns=80
 "set columns=80
@@ -65,6 +65,7 @@ set virtualedit=block
 inoremap <C-S-V> <Esc>"+p
 vnoremap <C-S-C> "+y
 
+
 au VimResized * exe "normal! \<c-w>="
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -72,9 +73,11 @@ au VimResized * exe "normal! \<c-w>="
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable "Enable syntax hl
 
-set guifont=Source\ Code\ Pro\ 9.99 "Inconsolata\ 12.9 Monaco\ 9.9 Anonymous\ Pro\ 10.99 monofur\ 11.9 DejaVu\ Sans\ Mono\ 10.6  Ubuntu\ Mono\ 10.9 Lucida\ Console\ 11.6  Meslo\ LG\ S\ 10.99 Linux 下面使用
+set guifont=hermit\ 9.66 "Source\ Code\ Pro\ 8.99 "Inconsolata\ 12.9 Monaco\ 8.9 Anonymous\ Pro\ 10.99 monofur\ 11.9 DejaVu\ Sans\ Mono\ 10.6  Ubuntu\ Mono\ 10.9 Lucida\ Console\ 11.6  Meslo\ LG\ S\ 10.99 Cosmic\ Sans\ Neue\ Mono\ 9.9 Linux 下面使用
 "set linespace=3 " for Anonymous Pro
 "set linespace=-2 " for Anonymous Pro
+"set linespace=-2 " for Source Code Pro
+set linespace=-2 " for  hermit
 "
 "set guifont=Bitstream_Vera_Sans_Mono:h11:cANSI "Windos下面使用
 "set gfw=Microsoft_YaHei:h12:cGB2312
@@ -83,11 +86,20 @@ set guifont=Source\ Code\ Pro\ 9.99 "Inconsolata\ 12.9 Monaco\ 9.9 Anonymous\ Pr
 
 set guioptions=+
 if has('gui_running')
+    if strftime("%H") > 8 + 0
+        colorscheme Lafwind_Day
+    else
+        colorscheme Lafwind_Night
+    endif
+
+
     "colorscheme Lafwind_Day_Ver2
     "colorscheme Lafwind_Pink
     "colorscheme Lafwind_Night
     "colorscheme Lafwind_Day
-    colorscheme Lafwind_Night_Ver2
+    "colorscheme Lafwind_Night_Ver2
+    "colorscheme Lafwind_Night_Ver3
+    "colorscheme Lafwind_Night_Ver4
     "colorscheme Lafwind_Night_Ver2_light
     "colorscheme Lafwind_Green
     "colorscheme Lafwind_Ocean
@@ -146,127 +158,155 @@ autocmd InsertEnter * :set number
 
 set nocompatible               " be iMproved
 filetype off                   " required!
-set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" set rtp+=~/.vim/bundle/vundle/
+" call vundle#rc()
 
  " let Vundle manage Vundle
  " required!
- Bundle 'gmarik/vundle'
+Plugin 'gmarik/Vundle.vim'
 
- " My Bundles here:
- "
- Bundle 'taglist.vim'
- Bundle 'The-NERD-tree'
- " Bundle 'snipMate'
- Bundle 'Yggdroot/indentLine'
- Bundle 'Shougo/neocomplete.vim'
- "Bundle 'Shougo/neocomplcache.vim'
- Bundle 'javacomplete'
- Bundle 'Syntastic'
- Bundle 'Gundo'
- Bundle 'octave.vim'
- Bundle 'instant-markdown.vim'
- Bundle 'clang-complete'
- Bundle 'VimIM'
- Bundle 'terryma/vim-multiple-cursors'
- Bundle 'yueyoum/vim-linemovement'
- Bundle 'surround.vim'
- "Bundle 'LargeFile'
- "
-
- Bundle 'SirVer/ultisnips'
- "Bundle 'drmingdrmer/xptemplate'
-
- "Session"
- Bundle 'xolox/vim-session'
- Bundle 'xolox/vim-misc'
-
- "Python
- Bundle 'Python-mode-klen'
- ""Bundle 'Pydiction'
- ""Bundle 'pythoncomplete'
-
- "Ruby and Rails"
- Bundle 'vim-ruby/vim-ruby'
- Bundle 'rails.vim'
- Bundle 'bundler'
- Bundle 'slim-template/vim-slim'
- ""Bundle 'rubycomplete.vim'
+" My Bundles here:
+"
 
 
- " JavaScript & CoffeeScript
- Bundle 'pangloss/vim-javascript'
- Bundle 'kchmck/vim-coffee-script'
- "Bundle 'michalliu/jsruntime.vim'
+"Plugin 'taglist.vim'
+"Plugin 'The-NERD-tree'
+Plugin 'majutsushi/tagbar'
+Plugin 'scrooloose/nerdtree'
+Plugin 'tpope/vim-vinegar'
+" Plugin 'snipMate'
+Plugin 'Yggdroot/indentLine'
+Plugin 'Shougo/neocomplete.vim'
+"Plugin 'Shougo/neocomplcache.vim'
+Plugin 'javacomplete'
+"Plugin 'Syntastic'
+Plugin 'scrooloose/syntastic'
+"Plugin 'Gundo'
+Plugin 'sjl/gundo.vim'
+Plugin 'octave.vim'
+"Plugin 'instant-markdown.vim'
+Plugin 'suan/vim-instant-markdown'
+Plugin 'clang-complete'
+"Plugin 'Rip-Rip/clang_complete'
+"Plugin 'VimIM'
+Plugin 'terryma/vim-multiple-cursors'
+Plugin 'yueyoum/vim-linemovement'
+"Plugin 'surround.vim'
+Plugin 'tpope/vim-surround'
+Plugin 'bling/vim-airline'
+"Plugin 'LargeFile'
+"
+Plugin 'godlygeek/tabular'
 
- " HTML $ CSS
- Bundle 'mattn/emmet-vim'
+Plugin 'SirVer/ultisnips'
+"Plugin 'drmingdrmer/xptemplate'
+
+"Session"
+Plugin 'xolox/vim-session'
+Plugin 'xolox/vim-misc'
+
+"Python
+"Plugin 'Python-mode-klen'
+Plugin 'klen/python-mode'
+""Plugin 'Pydiction'
+""Plugin 'pythoncomplete'
+
+"Ruby and Rails"
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'm2ym/rsense'
+"Plugin 'rails.vim'
+Plugin 'tpope/vim-rails'
+"Plugin 'bundler'
+Plugin 'tpope/vim-bundler'
+Plugin 'slim-template/vim-slim'
+""Plugin 'rubycomplete.vim'
+
+
+" JavaScript & CoffeeScript
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
+"Plugin 'michalliu/jsruntime.vim'
+
+" HTML $ CSS
+Plugin 'mattn/emmet-vim'
+
+"File Searching
+Plugin 'ctrlp.vim'
+Plugin 'Lokaltog/vim-easymotion'
+"Plugin 'Lokaltog/powerline'
+Plugin 'szw/vim-ctrlspace'
+" Plugin 'L9'
+" Plugin 'FuzzyFinder'
+" Plugin 'ack.vim'
+"Plugin 'unite.vim'
+
+Plugin 'tomtom/tcomment_vim'
+
+
+"Scheme & Racket
+Plugin 'wlangstroth/vim-racket'
+
+"Java doc
+"Plugin 'davetron5000/java-javadoc-vim'
+
+"Writting
+Plugin 'junegunn/goyo.vim'
+Plugin 'tpope/vim-markdown'
+
+"vim starting
+Plugin 'mhinz/vim-startify'
+
+"Git
+Plugin 'tpope/vim-fugitive'
+
+ "Plugin 'bling/vim-airline'
+ "Plugin 'vim-scripts/statusline.vim'
+ "Plugin 'fuenor/vim-statusline'
+ "Plugin 'millermedeiros/vim-statline'
+ "Plugin 'TagHighlight' "highlight more
+ "Plugin 'fcitx.vim'
 
 
 
- "File Searching
- Bundle 'ctrlp.vim'
- " Bundle 'L9'
- " Bundle 'FuzzyFinder'
- " Bundle 'ack.vim'
- "Bundle 'unite.vim'
-
- Bundle 'tomtom/tcomment_vim'
-
- "Git
- Bundle 'tpope/vim-fugitive'
-
- "Scheme & Racket
- Bundle 'wlangstroth/vim-racket'
-
- "Java doc
- Bundle 'davetron5000/java-javadoc-vim'
-
- "Bundle 'bling/vim-airline'
- "Bundle 'vim-scripts/statusline.vim'
- "Bundle 'fuenor/vim-statusline'
- "Bundle 'millermedeiros/vim-statline'
- "Bundle 'TagHighlight' "highlight more
- "Bundle 'fcitx.vim'
-
-
-
- ""Bundle 'AutoComplPop' for eclim completion
+ ""Plugin 'AutoComplPop' for eclim completion
 
  ""colorscheme
- "Bundle 'Solarized'
- "Bundle 'CSApprox'
+ "Plugin 'Solarized'
+ "Plugin 'CSApprox'
 "let g:CSApprox_attr_map = { 'bold' : 'bold', 'italic' : '', 'sp' : '' }
 
 
  "For Markdown Language
- "Bundle 'Markdown'
+ "Plugin 'Markdown'
 
  "For python complete
  "required python2, both 2 and 3 is not
  "allowed .
 
  "For Latex
- "Bundle 'coot/atp_vim'
+ "Plugin 'coot/atp_vim'
  "
- "Bundle 'millermedeiros/vim-statline'
- "Bundle 'statusline.vim'
- "Bundle 'Lokaltog/vim-powerline'
+ "Plugin 'millermedeiros/vim-statline'
+ "Plugin 'statusline.vim'
+ "Plugin 'Lokaltog/vim-powerline'
  "
  """"""""""""""""""""""""""""""""""""
  " Tutor Example
  " original repos on github
- " Bundle 'tpope/vim-fugitive'
- " Bundle 'Lokaltog/vim-easymotion'
- " Bundle 'rstacruz/sparkup', {'rtp': 'vim/'}
- " Bundle 'tpope/vim-rails.git'
+ " Plugin 'tpope/vim-fugitive'
+ " Plugin 'Lokaltog/vim-easymotion'
+ " Plugin 'rstacruz/sparkup', {'rtp': 'vim/'}
+ " Plugin 'tpope/vim-rails.git'
  " vim-scripts repos
- " Bundle 'L9'
- " Bundle 'FuzzyFinder'
+ " Plugin 'L9'
+ " Plugin 'FuzzyFinder'
  " non github repos
- " Bundle 'git://git.wincent.com/command-t.git'
+ " Plugin 'git://git.wincent.com/command-t.git'
  " ...
 
+ call vundle#end()
  filetype plugin indent on     " required!
  "
  " Brief help
@@ -276,13 +316,15 @@ call vundle#rc()
  " :BundleClean(!)      - confirm(or auto-approve) removal of unused bundles
  "
  " see :h vundle for more details or wiki for FAQ
- " NOTE: comments after Bundle command are not allowed..
+ " NOTE: comments after Plugin command are not allowed..
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "CTAGS
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-set tags=/home/lafwind/Source_Codes/tags
+set tags=tags;
+set autochdir
+"set tags=/home/lafwind/Source_Codes/tags
 "let Tlist_Ctags_Cmd = 'C:\Windows\System32\ctags.exe'
 "set tags=tags;
 "set autochdir
@@ -293,12 +335,12 @@ set path=.,/usr/local/include,/usr/include,/home/lafwind/Source_Codes/**
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "TagList
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let Tlist_Auto_Open = 1
-let Tlist_Exit_OnlyWindow = 1
-let Tlist_File_Fold_Auto_Close = 1
-let Tlist_Highlight_Tag_On_BufEnter = 0
-let Tlist_Show_One_File = 1
-let Tlist_Use_Right_Window = 1
+" let Tlist_Auto_Open = 1
+" let Tlist_Exit_OnlyWindow = 1
+" let Tlist_File_Fold_Auto_Close = 1
+" let Tlist_Highlight_Tag_On_BufEnter = 0
+" let Tlist_Show_One_File = 1
+" let Tlist_Use_Right_Window = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "NERDTREE
@@ -318,7 +360,7 @@ noremap gb ^
 noremap ge $
 vnoremap ge $h
 noremap tn <Esc>:tabnew<CR>
-nmap <F5> bi{<Esc>ea}<Esc>
+""nmap <F5> bi{<Esc>ea}<Esc>
 ""imap <> <><Esc>i
 "imap {} {}<Esc>i<CR><Esc><S-o>
 imap {} {}<Esc>i
@@ -329,7 +371,8 @@ imap '' ''<Esc>i
 vmap g/ y/<c-r>"<cr>
 nmap <Leader>w <Plug>VimwikiIndex
 noremap <silent> <F8> <Esc>:NERDTreeToggle <cr>
-nnoremap <silent> <F9> :TlistToggle<CR>
+" nnoremap <silent> <F9> :TlistToggle<CR>
+nnoremap <silent> <F9> :TagbarToggle<CR>
 
 inoremap <C-e> <Esc><S-a>
 inoremap <C-a> <Esc><S-i>
@@ -356,9 +399,13 @@ noremap <silent> mh :nohls<CR>
 noremap ,v :e $MYVIMRC<CR>
 noremap ,r :RestartVim<CR>
 
-noremap ,ls :Buffers<CR>
+" noremap ,ls :Buffers<CR>
+noremap ,ls :ls<CR>:e<Space>
 
 iab xfile <c-r>=expand("%:t")<CR>
+
+" Startify
+noremap <silent>,ss :Startify<CR>
 
 
 nnoremap <A-m> :mkview<CR>
@@ -398,7 +445,7 @@ vnoremap > >gv
 "cnoremap <Tab> <c-f>
 
 
-cd /home/lafwind/Source_Codes
+cd /home/lafwind/Projects
 
 let g:bufExplorerSplitBelow=1        " Split new window below current.
 
@@ -411,8 +458,8 @@ let g:bufExplorerUseCurrentWindow=1  " Open in new window.
 set nocp
 filetype plugin on
 " map <F12> :!ctags -R --c++-kinds=+p --languages=c++ --fields=+iaS --extra=+q .<CR>
-map <F12> :!ctags -R && cscope -Rbq<CR>
-cs add cscope.out /home/lafwind/Source_Codes/
+map <F12> :!ctags -R . && cscope -Rbq .<CR>
+cs add cscope.out /home/lafwind/Projects/
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""
@@ -439,16 +486,31 @@ autocmd BufReadPre *.js nnoremap<buffer><F5> :w<CR>:set makeprg=node\ %<CR>:make
 
 "tabstop"
 autocmd BufReadPre *.py set tabstop=2 | set sw=2 | set softtabstop=2
+autocmd BufFilePre *.py set tabstop=2 | set sw=2 | set softtabstop=2
 autocmd FileType *.py set tabstop=2 | set sw=2 | set softtabstop=2
+autocmd FileReadPre *.py set tabstop=2 | set sw=2 | set softtabstop=2
 autocmd BufReadPre *.rb set tabstop=2 | set sw=2 | set softtabstop=2
+autocmd BufFilePre *.rb set tabstop=2 | set sw=2 | set softtabstop=2
 autocmd FileType *.rb set tabstop=2 | set sw=2 | set softtabstop=2
+autocmd FileReadPre *.rb set tabstop=2 | set sw=2 | set softtabstop=2
 autocmd BufReadPre *.ruby set tabstop=2 | set sw=2 | set softtabstop=2
 autocmd FileType *.ruby set tabstop=2 | set sw=2 | set softtabstop=2
 autocmd BufReadPre *.erb set tabstop=2 | set sw=2 | set softtabstop=2
+autocmd BufFilePre *.erb set tabstop=2 | set sw=2 | set softtabstop=2
+autocmd FileType *.erb set tabstop=2 | set sw=2 | set softtabstop=2
+autocmd FileReadPre *.erb set tabstop=2 | set sw=2 | set softtabstop=2
 autocmd BufReadPre *.html set tabstop=2 | set sw=2 | set softtabstop=2
+autocmd BufFilePre *.html set tabstop=2 | set sw=2 | set softtabstop=2
+autocmd FileType *.html set tabstop=2 | set sw=2 | set softtabstop=2
+autocmd FileReadPre *.html set tabstop=2 | set sw=2 | set softtabstop=2
 autocmd BufReadPre *.css set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd FileType *.yml set tabstop=2 | set sw=2 | set softtabstop=2
+autocmd BufFilePre *.css set tabstop=2 | set sw=2 | set softtabstop=2
+autocmd FileType *.css set tabstop=2 | set sw=2 | set softtabstop=2
+autocmd FileReadPre *.css set tabstop=2 | set sw=2 | set softtabstop=2
 autocmd BufReadPre *.yml set tabstop=2 | set sw=2 | set softtabstop=2
+autocmd BufFilePre *.yml set tabstop=2 | set sw=2 | set softtabstop=2
+autocmd FileType *.yml set tabstop=2 | set sw=2 | set softtabstop=2
+autocmd FileReadPre *.yml set tabstop=2 | set sw=2 | set softtabstop=2
 
 autocmd BufLeave *.py set tabstop=4 | set sw=4 | set softtabstop=4
 autocmd BufLeave *.rb set tabstop=4 | set sw=4 | set softtabstop=4
@@ -663,45 +725,45 @@ au BufWritePre * call DeleteEmptylineEndOfFile()
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " User Defined Status Line.
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-augroup Statusline
-  au! Statusline
-  au BufEnter * call <SID>SetFullStatusline()
-  au BufLeave,BufNew,BufRead,BufNewFile * call <SID>SetSimpleStatusline()
-augroup END
-
-function s:SetFullStatusline()
-    setlocal statusline= "clear the statusline for when vimrc is reloaded
-    setlocal statusline+=\ %n           "buffer number
-    setlocal statusline+=\ %t       "tail of the filename
-    setlocal statusline+=\ [%{strlen(&fenc)?&fenc:'none'}, "file encoding
-    setlocal statusline+=%{&ff}] "file format
-    setlocal statusline+=\ %h      "help file flag
-    setlocal statusline+=\ %m      "modified flag
-    setlocal statusline+=\ %r      "read only flag
-    setlocal statusline+=\ %y      "filetype
-    setlocal statusline+=%{fugitive#statusline()}
-    setlocal statusline+=%#warningmsg#
-    setlocal statusline+=%{SyntasticStatuslineFlag()}
-    setlocal statusline+=%*
-    setlocal statusline+=\ %=   "left/right separator
-    setlocal statusline+=\ [%c,     "cursor column
-    setlocal statusline+=%l   "cursor line/total lines
-    setlocal statusline+=/%L]   "cursor line/total lines
-    setlocal statusline+=\ [%P]    "percent through file
-    setlocal statusline+=\ [%06.6b, "ASCII
-    setlocal statusline+=0x%04.4B] "ASCII
-    setlocal statusline+=\ [%-16{strftime(\"%Y-%m-%d\ %H:%M\")}]  "time
-endfunction
-
-fun! s:SetSimpleStatusline() "{{{
-    setlocal statusline= "clear the statusline for when vimrc is reloaded
-    setlocal statusline+=\ %n\            "buffer number
-    setlocal statusline+=\ %t\        "tail of the filename
-    setlocal statusline+=\ [%{strlen(&fenc)?&fenc:'none'}, "file encoding
-    setlocal statusline+=%{&ff}]\  "file format
-    setlocal statusline+=\ %=   "left/right separator
-    setlocal statusline+=\ [%P]\     "percent through file
-endfunction "}}}
+" augroup Statusline
+"   au! Statusline
+"   au BufEnter * call <SID>SetFullStatusline()
+"   au BufLeave,BufNew,BufRead,BufNewFile * call <SID>SetSimpleStatusline()
+" augroup END
+"
+" function s:SetFullStatusline()
+"     setlocal statusline= "clear the statusline for when vimrc is reloaded
+"     setlocal statusline+=\ %n           "buffer number
+"     setlocal statusline+=\ %t       "tail of the filename
+"     setlocal statusline+=\ [%{strlen(&fenc)?&fenc:'none'}, "file encoding
+"     setlocal statusline+=%{&ff}] "file format
+"     setlocal statusline+=\ %h      "help file flag
+"     setlocal statusline+=\ %m      "modified flag
+"     setlocal statusline+=\ %r      "read only flag
+"     setlocal statusline+=\ %y      "filetype
+"     setlocal statusline+=%{fugitive#statusline()}
+"     setlocal statusline+=%#warningmsg#
+"     setlocal statusline+=%{SyntasticStatuslineFlag()}
+"     setlocal statusline+=%*
+"     setlocal statusline+=\ %=   "left/right separator
+"     setlocal statusline+=\ [%c,     "cursor column
+"     setlocal statusline+=%l   "cursor line/total lines
+"     setlocal statusline+=/%L]   "cursor line/total lines
+"     setlocal statusline+=\ [%P]    "percent through file
+"     "setlocal statusline+=\ [%06.6b, "ASCII
+"     "setlocal statusline+=0x%04.4B] "ASCII
+"     setlocal statusline+=\ [%-16{strftime(\"%Y-%m-%d\ %H:%M\")}]  "time
+" endfunction
+"
+" fun! s:SetSimpleStatusline() "{{{
+"     setlocal statusline= "clear the statusline for when vimrc is reloaded
+"     setlocal statusline+=\ %n\            "buffer number
+"     setlocal statusline+=\ %t\        "tail of the filename
+"     setlocal statusline+=\ [%{strlen(&fenc)?&fenc:'none'}, "file encoding
+"     setlocal statusline+=%{&ff}]\  "file format
+"     setlocal statusline+=\ %=   "left/right separator
+"     setlocal statusline+=\ [%P]\     "percent through file
+" endfunction "}}}
 
 
 
@@ -803,3 +865,105 @@ let g:UltiSnipsExpandTrigger="<tab>"
 let g:UltiSnipsListSnippets="<c-tab>"
 let g:UltiSnipsJumpForwardTrigger="<tab>"
 let g:UltiSnipsJumpBackwardTrigger="<s-tab>"
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"Goyo
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+let g:goyo_width = 119
+
+nmap <leader>g :Goyo<cr>
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Startify
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+
+    let g:startify_skiplist = [
+                \ 'COMMIT_EDITMSG',
+                \ $VIMRUNTIME .'/doc',
+                \ 'bundle/.*/doc',
+                \ '.vimgolf',
+                \ ]
+
+    let g:startify_custom_footer =
+          \ ['', "   Vim is charityware. Please read ':help uganda'.", '']
+
+    let g:startify_custom_header = [
+                \ '                __   __                                                  ',
+                \ '               __ \ / __         __________________________________      ',
+                \ '              /  \ | /  \       /           Hello World!!          \     ',
+                \ '                  \|/          /                                    \    ',
+                \ '             _,.---v---._      |              大家好！              |    ',
+                \ '    /\__/\  /            \     \   我是一个粉刷匠，粉刷本领强~~     /    ',
+                \ '    \_  _/ /              \    / __________________________________/     ',
+                \ '      \ \_|           @ __|   /_/                                        ',
+                \ '       \                \_                                               ',
+                \ '        \     ,__/       /                                               ',
+                \ '      ~~~`~~~~~~~~~~~~~~/~~~~                                            ',
+                \ '',
+                \ ]
+
+
+    if has('gui_running')
+
+        "hi StartifyBracket  guifg=red
+        "hi StartifyNumber   guifg=yellow
+        if strftime("%H") > 8 + 00
+            hi StartifyPath     guifg=black
+        else
+            hi StartifyPath guifg=white
+        endif
+
+        "hi StartifySlash    guifg=red
+        "hi StartifySpecial  guifg=red
+        hi StartifyHeader   guifg=green
+        hi StartifyFooter   guifg=gray
+        hi StartifyFile    guifg=red
+    else
+        hi StartifyBracket ctermfg=240
+        hi StartifyNumber  ctermfg=215
+        hi StartifyPath    ctermfg=245
+        hi StartifySlash   ctermfg=240
+        hi StartifySpecial ctermfg=240
+        hi StartifyHeader  ctermfg=114
+        hi StartifyFooter  ctermfg=240
+        "hi StartifyFile    ctermfg=111
+    endif
+
+    ""autocmd VimEnter *
+    ""            \ if !argc() |
+    ""            \   Startify |
+    ""            \   NERDTree |
+    ""            \   execute "normal \<c-w>w" |
+    ""            \ endif
+
+"" let g:startify_custom_header = [
+""             \ '     _    _      _ _        __      ___            ',
+""             \ '    | |  | |    | | |       \ \    / (_)           ',
+""             \ '    | |__| | ___| | | ___    \ \  / / _ _ __ ___   ',
+""             \ '    |  __  |/ _ \ | |/ _ \    \ \/ / | | `_ ` _ \  ',
+""             \ '    | |  | |  __/ | | (_) |    \  /  | | | | | | | ',
+""             \ '    |_|  |_|\___|_|_|\___/      \/   |_|_| |_| |_| ',
+""             \ '',
+""             \ '',
+""             \ ]
+
+"""""""""""""""
+"""CtrlSpace
+"""""""""""""""
+hi CtrlSpaceSelected term=reverse ctermfg=187   guifg=#d7d7af ctermbg=23    guibg=#005f5f cterm=bold gui=bold
+hi CtrlSpaceNormal   term=NONE    ctermfg=244   guifg=#808080 ctermbg=232   guibg=#080808 cterm=NONE gui=NONE
+hi CtrlSpaceSearch   ctermfg=220  guifg=#ffd700 ctermbg=NONE  guibg=NONE    cterm=bold    gui=bold
+hi CtrlSpaceStatus   ctermfg=230  guifg=#ffffd7 ctermbg=234   guibg=#1c1c1c cterm=NONE    gui=NONE
+
+""""""""""""""""""""""""
+"""vim-airline
+""""""""""""""""""""""""
+" let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
+
+let g:airline_powerline_fonts = 1

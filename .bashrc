@@ -112,15 +112,12 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
+export PATH=$HOME/local/bin:$PATH
 
-alias ct='ctags -R --c++-kinds=+px --fields=+iaS --extra=+q'
-export PATH=/home/lafwind/.cabal/bin:$PATH
+export CATALINA_HOME=/usr/local/development_env/apache-tomcat-7.0.47
+export JDK_HOME=/usr/local/development_env/java/
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
-### Android command line
-export PATH=$PATH:~/android-studio/sdk/platform-tools
-##export PATH=$PATH:~/android-sdk-linux/tools
-
-export PYTHONPATH=/usr/local/lib/python2.7/dist-packages/
-##"alias install="sudo apt-get instll"

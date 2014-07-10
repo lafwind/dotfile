@@ -5,7 +5,10 @@ ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="ys"
+
+ZSH_THEME="ys" #Stable
+
+#ZSH_THEME="fox" #try
 
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
@@ -38,8 +41,6 @@ source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-
 #By Lafwind
 
 #Dircolors
@@ -48,8 +49,6 @@ ZLS_COLORS="${LS_COLORS}";export ZLS_COLORS
 #彩色补全菜单
 zstyle ':completion:*' list-colors ${(s.:.)LS_COLORS}
 zstyle ':completion:::kill::processes' list-colors '=(#b) #([0-9]#)=0=01;31'
-
-
 
 #漂亮又实用的命令高亮界面
 setopt extended_glob
@@ -86,7 +85,6 @@ check-cmd-self-insert() { zle .self-insert && recolor-cmd }
  zle -N self-insert check-cmd-self-insert
  zle -N backward-delete-char check-cmd-backward-delete-char
 
-
 ### Android command line
 export PATH=$PATH:~/android-sdk-linux/tools
 
@@ -122,18 +120,36 @@ export PATH=$PATH:/usr/local/app/racket/man/
 
 export PATH=$PATH:/usr/bin/pyflakes
 
-export JDK_HOME="/usr/lib/jvm/java-7-oracle/"
+export CATALINA_HOME=/usr/local/development_env/apache-tomcat-7.0.47
+export JDK_HOME="/usr/local/development_env/java/"
 
-alias vim="/home/lafwind/Laf_gVim/bin/vim"
-alias vi="/home/lafwind/Laf_gVim/bin/vim"
+export JAVA_HOME=/usr/local/development_env/java/
+export JRE_HOME=${JAVA_HOME}/jre
+export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
+export PATH=${JAVA_HOME}/bin:$PATH
+
+export NODE_PATH=/home/lafwind/local/lib/node_modules
+
+alias vim="/usr/local/apps/LafVim/bin/vim"
+alias vi="/usr/local/apps/LafVim/bin/vim"
 alias vim3="/home/lafwind/Laf_gVim/bin/vim"
 alias gvim3='~/Laf_gVim/bin/gvim'
 alias tmux="tmux -2"
 alias c="source-highlight --out-format=esc -o STDOUT -i"
 alias cctags="ctags -R --exclude=.git --exclude=log * --exclude=coverage"
 
+alias gcc="gcc -std=gnu99"
+
 export EDITOR=gvim
 
 export HISTCONTROL=erasedups
 
 DISABLE_UPDATE_PROMPT=true
+export PATH=$HOME/local/bin:$PATH
+
+plugins=( /home/lafwind/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting)
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+
+### For Lab
+alias sshnlg="ssh b111220055@114.212.191.43"
