@@ -73,7 +73,7 @@ au VimResized * exe "normal! \<c-w>="
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable "Enable syntax hl
 
-set guifont=hermit\ 9.66 "Source\ Code\ Pro\ 8.99 "Inconsolata\ 12.9 Monaco\ 8.9 Anonymous\ Pro\ 10.99 monofur\ 11.9 DejaVu\ Sans\ Mono\ 10.6  Ubuntu\ Mono\ 10.9 Lucida\ Console\ 11.6  Meslo\ LG\ S\ 10.99 Cosmic\ Sans\ Neue\ Mono\ 9.9 Linux 下面使用
+set guifont=hermit\ 9.66 "Source\ Code\ Pro\ 8.99 "Inconsolata\ 12.9 Monaco\ 8.9 Anonymous\ Pro\ 10.99 monofur\ 11.9 DejaVu\ Sans\ Mono\ 10.6  Ubuntu\ Mono\ 10.9 Lucida\ Console\ 11.6  Meslo\ LG\ S\ 10.99 Cosmic\ Sans\ Neue\ Mono\ 9.9 hermit\ 9.66  Linux下面使用
 "set linespace=3 " for Anonymous Pro
 "set linespace=-2 " for Anonymous Pro
 "set linespace=-2 " for Source Code Pro
@@ -86,19 +86,19 @@ set linespace=-2 " for  hermit
 
 set guioptions=+
 if has('gui_running')
-    if strftime("%H") > 8 + 0
-        colorscheme Lafwind_Day
-    else
-        colorscheme Lafwind_Night
-    endif
+    " if strftime("%H") > 8 + 0
+    "     colorscheme Lafwind_Day
+    " else
+    "     colorscheme Lafwind_Night
+    " endif
 
 
     "colorscheme Lafwind_Day_Ver2
     "colorscheme Lafwind_Pink
-    "colorscheme Lafwind_Night
+    colorscheme Lafwind_Night
     "colorscheme Lafwind_Day
     "colorscheme Lafwind_Night_Ver2
-    "colorscheme Lafwind_Night_Ver3
+    'colorscheme Lafwind_Night_Ver3
     "colorscheme Lafwind_Night_Ver4
     "colorscheme Lafwind_Night_Ver2_light
     "colorscheme Lafwind_Green
@@ -180,19 +180,19 @@ Plugin 'tpope/vim-vinegar'
 Plugin 'Yggdroot/indentLine'
 Plugin 'Shougo/neocomplete.vim'
 "Plugin 'Shougo/neocomplcache.vim'
-Plugin 'javacomplete'
+"Plugin 'javacomplete'
 "Plugin 'Syntastic'
 Plugin 'scrooloose/syntastic'
 "Plugin 'Gundo'
-Plugin 'sjl/gundo.vim'
-Plugin 'octave.vim'
+"Plugin 'sjl/gundo.vim'
+"Plugin 'octave.vim'
 "Plugin 'instant-markdown.vim'
-Plugin 'suan/vim-instant-markdown'
+"Plugin 'suan/vim-instant-markdown'
 Plugin 'clang-complete'
 "Plugin 'Rip-Rip/clang_complete'
 "Plugin 'VimIM'
 Plugin 'terryma/vim-multiple-cursors'
-Plugin 'yueyoum/vim-linemovement'
+"Plugin 'yueyoum/vim-linemovement'
 "Plugin 'surround.vim'
 Plugin 'tpope/vim-surround'
 Plugin 'bling/vim-airline'
@@ -204,8 +204,8 @@ Plugin 'SirVer/ultisnips'
 "Plugin 'drmingdrmer/xptemplate'
 
 "Session"
-Plugin 'xolox/vim-session'
-Plugin 'xolox/vim-misc'
+"Plugin 'xolox/vim-session'
+"Plugin 'xolox/vim-misc'
 
 "Python
 "Plugin 'Python-mode-klen'
@@ -911,17 +911,18 @@ nmap <leader>g :Goyo<cr>
 
         "hi StartifyBracket  guifg=red
         "hi StartifyNumber   guifg=yellow
-        if strftime("%H") > 8 + 00
-            hi StartifyPath     guifg=black
-        else
-            hi StartifyPath guifg=white
-        endif
+        " if strftime("%H") > 8 + 00
+        "     hi StartifyPath     guifg=black
+        " else
+        "     hi StartifyPath guifg=white
+        " endif
 
         "hi StartifySlash    guifg=red
         "hi StartifySpecial  guifg=red
         hi StartifyHeader   guifg=green
         hi StartifyFooter   guifg=gray
         hi StartifyFile    guifg=red
+        hi StartifyPath guifg=white
     else
         hi StartifyBracket ctermfg=240
         hi StartifyNumber  ctermfg=215
@@ -954,6 +955,7 @@ nmap <leader>g :Goyo<cr>
 """""""""""""""
 """CtrlSpace
 """""""""""""""
+let g:ctrlspace_default_mapping_key = "<C-i>"
 hi CtrlSpaceSelected term=reverse ctermfg=187   guifg=#d7d7af ctermbg=23    guibg=#005f5f cterm=bold gui=bold
 hi CtrlSpaceNormal   term=NONE    ctermfg=244   guifg=#808080 ctermbg=232   guibg=#080808 cterm=NONE gui=NONE
 hi CtrlSpaceSearch   ctermfg=220  guifg=#ffd700 ctermbg=NONE  guibg=NONE    cterm=bold    gui=bold
@@ -962,8 +964,8 @@ hi CtrlSpaceStatus   ctermfg=230  guifg=#ffffd7 ctermbg=234   guibg=#1c1c1c cter
 """"""""""""""""""""""""
 """vim-airline
 """"""""""""""""""""""""
-" let g:airline#extensions#tabline#enabled = 1
-let g:airline#extensions#tabline#left_sep = ' '
-let g:airline#extensions#tabline#left_alt_sep = '|'
+let g:airline#extensions#tabline#enabled = 1
+"let g:airline#extensions#tabline#left_sep = ' '
+"let g:airline#extensions#tabline#left_alt_sep = '|'
 
 let g:airline_powerline_fonts = 1
