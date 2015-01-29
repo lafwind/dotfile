@@ -20,9 +20,9 @@ set cindent
 
 "Tab
 set expandtab "use  4 spaces instead of tab
-set tabstop=4
-set shiftwidth=4
-set softtabstop=4
+set tabstop=2
+set shiftwidth=2
+set softtabstop=2
 
 set esckeys " Allow cursor keys in insert mode.
 set vb t_vb= " 不要响铃
@@ -73,7 +73,7 @@ au VimResized * exe "normal! \<c-w>="
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable "Enable syntax hl
 
-set guifont=hermit\ 9.66 "Source\ Code\ Pro\ 8.99 "Inconsolata\ 12.9 Monaco\ 8.9 Anonymous\ Pro\ 10.99 monofur\ 11.9 DejaVu\ Sans\ Mono\ 10.6  Ubuntu\ Mono\ 10.9 Lucida\ Console\ 11.6  Meslo\ LG\ S\ 10.99 Cosmic\ Sans\ Neue\ Mono\ 9.9 hermit\ 9.66  Linux下面使用
+set guifont=Source\ Code\ Pro\ 8.99 "Source\ Code\ Pro\ 8.99 "Inconsolata\ 12.9 Monaco\ 8.9 Anonymous\ Pro\ 10.99 monofur\ 11.9 DejaVu\ Sans\ Mono\ 10.6  Ubuntu\ Mono\ 10.9 Lucida\ Console\ 11.6  Meslo\ LG\ S\ 10.99 Cosmic\ Sans\ Neue\ Mono\ 9.9 hermit\ 9.66  Linux下面使用
 "set linespace=3 " for Anonymous Pro
 "set linespace=-2 " for Anonymous Pro
 "set linespace=-2 " for Source Code Pro
@@ -207,30 +207,6 @@ Plugin 'SirVer/ultisnips'
 "Plugin 'xolox/vim-session'
 "Plugin 'xolox/vim-misc'
 
-"Python
-"Plugin 'Python-mode-klen'
-Plugin 'klen/python-mode'
-""Plugin 'Pydiction'
-""Plugin 'pythoncomplete'
-
-"Ruby and Rails"
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'm2ym/rsense'
-"Plugin 'rails.vim'
-Plugin 'tpope/vim-rails'
-"Plugin 'bundler'
-Plugin 'tpope/vim-bundler'
-Plugin 'slim-template/vim-slim'
-""Plugin 'rubycomplete.vim'
-
-
-" JavaScript & CoffeeScript
-Plugin 'pangloss/vim-javascript'
-Plugin 'kchmck/vim-coffee-script'
-"Plugin 'michalliu/jsruntime.vim'
-
-" HTML $ CSS
-Plugin 'mattn/emmet-vim'
 
 "File Searching
 Plugin 'ctrlp.vim'
@@ -245,8 +221,40 @@ Plugin 'szw/vim-ctrlspace'
 Plugin 'tomtom/tcomment_vim'
 
 
+"Ruby and Rails"
+Plugin 'vim-ruby/vim-ruby'
+Plugin 'm2ym/rsense'
+"Plugin 'rails.vim'
+Plugin 'tpope/vim-rails'
+"Plugin 'bundler'
+Plugin 'tpope/vim-bundler'
+Plugin 'slim-template/vim-slim'
+""Plugin 'rubycomplete.vim'
+
+"Rust"
+Plugin 'wting/rust.vim'
+
+"Elixir
+Plugin 'elixir-lang/vim-elixir'
+
+"Python
+"Plugin 'Python-mode-klen'
+Plugin 'klen/python-mode'
+""Plugin 'Pydiction'
+""Plugin 'pythoncomplete'
+
+" JavaScript & CoffeeScript
+Plugin 'pangloss/vim-javascript'
+Plugin 'kchmck/vim-coffee-script'
+"Plugin 'michalliu/jsruntime.vim'
+
+" HTML $ CSS
+Plugin 'mattn/emmet-vim'
+Plugin 'bitfyre/vim-indent-html'
+
 "Scheme & Racket
 Plugin 'wlangstroth/vim-racket'
+
 
 "Java doc
 "Plugin 'davetron5000/java-javadoc-vim'
@@ -485,41 +493,52 @@ autocmd BufReadPre *.js nnoremap<buffer><F5> :w<CR>:set makeprg=node\ %<CR>:make
 
 
 "tabstop"
-autocmd BufReadPre *.py set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd BufFilePre *.py set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd FileType *.py set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd FileReadPre *.py set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd BufReadPre *.rb set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd BufFilePre *.rb set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd FileType *.rb set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd FileReadPre *.rb set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd BufReadPre *.ruby set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd FileType *.ruby set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd BufReadPre *.erb set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd BufFilePre *.erb set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd FileType *.erb set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd FileReadPre *.erb set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd BufReadPre *.html set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd BufFilePre *.html set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd FileType *.html set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd FileReadPre *.html set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd BufReadPre *.css set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd BufFilePre *.css set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd FileType *.css set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd FileReadPre *.css set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd BufReadPre *.yml set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd BufFilePre *.yml set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd FileType *.yml set tabstop=2 | set sw=2 | set softtabstop=2
-autocmd FileReadPre *.yml set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd BufReadPre *.py set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd BufFilePre *.py set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd FileType *.py set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd FileReadPre *.py set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd BufReadPre *.rb set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd BufFilePre *.rb set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd FileType *.rb set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd FileReadPre *.rb set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd BufReadPre *.ruby set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd FileType *.ruby set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd BufReadPre *.erb set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd BufFilePre *.erb set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd FileType *.erb set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd FileReadPre *.erb set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd BufReadPre *.html set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd BufFilePre *.html set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd FileType *.html set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd FileReadPre *.html set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd BufReadPre *.css set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd BufFilePre *.css set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd FileType *.css set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd FileReadPre *.css set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd BufReadPre *.yml set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd BufFilePre *.yml set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd FileType *.yml set tabstop=2 | set sw=2 | set softtabstop=2
+"autocmd FileReadPre *.yml set tabstop=2 | set sw=2 | set softtabstop=2
+"
+"autocmd BufLeave *.py set tabstop=4 | set sw=4 | set softtabstop=4
+"autocmd BufLeave *.rb set tabstop=4 | set sw=4 | set softtabstop=4
+"autocmd BufLeave *.ruby set tabstop=4 | set sw=4 | set softtabstop=4
+"autocmd BufLeave *.html set tabstop=4 | set sw=4 | set softtabstop=4
+"autocmd BufLeave *.css set tabstop=4 | set sw=4 | set softtabstop=4
+"autocmd BufLeave *.erb set tabstop=4 | set sw=4 | set softtabstop=4
+"autocmd BufLeave *.yml set tabstop=4 | set sw=4 | set softtabstop=4
 
-autocmd BufLeave *.py set tabstop=4 | set sw=4 | set softtabstop=4
-autocmd BufLeave *.rb set tabstop=4 | set sw=4 | set softtabstop=4
-autocmd BufLeave *.ruby set tabstop=4 | set sw=4 | set softtabstop=4
-autocmd BufLeave *.html set tabstop=4 | set sw=4 | set softtabstop=4
-autocmd BufLeave *.css set tabstop=4 | set sw=4 | set softtabstop=4
-autocmd BufLeave *.erb set tabstop=4 | set sw=4 | set softtabstop=4
-autocmd BufLeave *.yml set tabstop=4 | set sw=4 | set softtabstop=4
+autocmd BufReadPre *.c set tabstop=4 | set sw=4 | set softtabstop=4
+autocmd BufFilePre *.c set tabstop=4 | set sw=4 | set softtabstop=4
+autocmd FileType *.c set tabstop=4 | set sw=4 | set softtabstop=4
+autocmd FileReadPre *.c set tabstop=4 | set sw=4 | set softtabstop=4
+autocmd BufLeave *.c set tabstop=2 | set sw=2 | set softtabstop=2
 
+autocmd BufReadPre *.cpp set tabstop=4 | set sw=4 | set softtabstop=4
+autocmd BufFilePre *.cpp set tabstop=4 | set sw=4 | set softtabstop=4
+autocmd FileType *.cpp set tabstop=4 | set sw=4 | set softtabstop=4
+autocmd FileReadPre *.cpp set tabstop=4 | set sw=4 | set softtabstop=4
+autocmd BufLeave *.cpp set tabstop=2 | set sw=2 | set softtabstop=2
 
 "Quickfix"
 autocmd BufReadPre *.py nnoremap<buffer><F7> :copen<CR>
@@ -969,3 +988,14 @@ let g:airline#extensions#tabline#enabled = 1
 "let g:airline#extensions#tabline#left_alt_sep = '|'
 
 let g:airline_powerline_fonts = 1
+
+
+let g:html_indent_inctags = "html,body,head,tbody"
+let g:html_indent_inctags = "a, abbr, acronym, address, b, bdo, big, blockquote, button, caption"
+let g:html_indent_inctags = "center, cite, code, colgroup, del, dfn, dir, div, dl, em, fieldset, font"
+let g:html_indent_inctags = "form, frameset, h1, h2, h3, h4, h5, h6, i, iframe, ins, kbd, label, legend"
+let g:html_indent_inctags = "map, menu, noframes, noscript, object, ol, optgroup, q, s, samp, select"
+let g:html_indent_inctags = "small, span, strong, sub, sup, table, textarea, title, tt, u, ul, var, th, td, tr, tfoot, thead"
+let g:html_indent_inctags = "area, article, aside, audio, bdi, canvas, command, datalist, details, embed"
+let g:html_indent_inctags = "figure, footer, header, group, keygen, mark, math, meter, nav, output"
+let g:html_indent_inctags = "progress, ruby, section, svg, texture, time, video, wbr, text"

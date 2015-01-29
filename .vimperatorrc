@@ -3,6 +3,7 @@
 source! /home/lafwind/.vimperatorrc.local
 
 " vim: set ft=vimperator:
+set gui=nonavigation
 let mapleader = ","
 
 
@@ -54,4 +55,3 @@ noremap <leader>ck :set gui=nobookmarks<CR>
 "set previouspattern+=^上一页$
 set nextpattern=\s*下一页|下一頁|Next|next|下一章|下一张|下页|本主题下30篇\s*,\bnext\b,^>$,^>>$,\bmore\b
 set previouspattern=\s*上一页|上一頁|Preview|Prev|prev|Pre|pre|上一章|上一张|上页|本主题上30篇\s*,\bprev|previous\b,^<$,^<<$
-

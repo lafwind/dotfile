@@ -86,7 +86,7 @@ check-cmd-self-insert() { zle .self-insert && recolor-cmd }
  zle -N backward-delete-char check-cmd-backward-delete-char
 
 ### Android command line
-export PATH=$PATH:~/android-sdk-linux/tools
+export PATH=$PATH:~/Documents/src_software/android-sdk-linux/tools
 
 ##export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python2.7/dist-packages/
 ##export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.3/dist-packages/
@@ -108,9 +108,9 @@ export PATH=$PATH:~/android-sdk-linux/tools
 #export PYTHONPATH=/usr/local/python-2.7.5/lib/python2.7/
 #export PYTHONPATH=/usr/local/python-3.3.2/lib/python3.3/
 export PATH=$PATH:/usr/local/go/bin:/opt/apache-ant-1.9.0/bin
-export PATH=$PATH:/home/lafwind/android-studio/bin/
+export PATH=$PATH:/home/lafwind/Documents/src_software/android-studio/bin/
 export PATH=$PATH:/home/lafwind/google_appengine/
-export PATH=$PATH:/home/lafwind/android-studio/sdk/platform-tools/
+export PATH=$PATH:/home/lafwind/Documents/src_software/android-sdk-linux/platform-tools/
 export PATH=$PATH:/usr/local/app/idea-IC-132.425/bin/
 export PATH=$PATH:/usr/local/app/idea-IU-129.1328/bin/
 #export PATH=$PATH:/home/lafwind/android-studio/gradle-1.6/bin/
@@ -121,19 +121,24 @@ export PATH=$PATH:/usr/local/app/racket/man/
 export PATH=$PATH:/usr/bin/pyflakes
 
 export CATALINA_HOME=/usr/local/development_env/apache-tomcat-7.0.47
-export JDK_HOME="/usr/local/development_env/java/"
+### export JDK_HOME="/usr/local/development_env/java/"
+export JDK_HOME="/usr/lib/jvm/java-1.7.0-openjdk-amd64/"
 
-export JAVA_HOME=/usr/local/development_env/java/
+export JAVA_HOME=/usr/lib/jvm/java-1.7.0-openjdk-amd64
 export JRE_HOME=${JAVA_HOME}/jre
 export CLASSPATH=.:${JAVA_HOME}/lib:${JRE_HOME}/lib
 export PATH=${JAVA_HOME}/bin:$PATH
 
+# export PATH=$PATH:/home/lafwind/local/apps/redis-2.8.12/src/
+
 export NODE_PATH=/home/lafwind/local/lib/node_modules
+
+export PATH=$PATH:/home/lafwind/local/apps/elixir/bin/
 
 alias vim="/usr/local/apps/LafVim/bin/vim"
 alias vi="/usr/local/apps/LafVim/bin/vim"
 alias vim3="/home/lafwind/Laf_gVim/bin/vim"
-alias gvim3='~/Laf_gVim/bin/gvim'
+alias gvim='/usr/local/apps/LafVim/bin/gvim'
 alias tmux="tmux -2"
 alias c="source-highlight --out-format=esc -o STDOUT -i"
 alias cctags="ctags -R --exclude=.git --exclude=log * --exclude=coverage"
@@ -153,3 +158,23 @@ PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
 
 ### For Lab
 alias sshnlg="ssh b111220055@114.212.191.43"
+
+
+# enable color support of ls and also add handy aliases
+# if [ -x /usr/bin/dircolors ]; then
+#     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
+#     alias ls='ls --color=auto'
+#     #alias dir='dir --color=auto'
+#     #alias vdir='vdir --color=auto'
+#
+#     alias grep='grep --color=auto'
+#     alias fgrep='fgrep --color=auto'
+#     alias egrep='egrep --color=auto'
+# fi
+#
+# # some more ls aliases
+# alias ll='ls -alF'
+# alias la='ls -A'
+# alias l='ls -CF'
+# eval $(dircolors -b $HOME/.dircolors)
+eval $(dircolors -b $HOME/.dircolors)

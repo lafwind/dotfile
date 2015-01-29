@@ -113,6 +113,7 @@ if ! shopt -oq posix; then
   fi
 fi
 export PATH=$HOME/local/bin:$PATH
+export PATH=/usr/local/apps:$PATH
 
 export CATALINA_HOME=/usr/local/development_env/apache-tomcat-7.0.47
 export JDK_HOME=/usr/local/development_env/java/
@@ -121,3 +122,5 @@ export JDK_HOME=/usr/local/development_env/java/
 export PATH="/usr/local/heroku/bin:$PATH"
 
 PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+eval $(dircolors -b $HOME/.dircolors)
+eval $(dircolors -b $HOME/.dircolors)
