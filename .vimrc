@@ -1,3 +1,4 @@
+"let $VIMRUNTIME="/home/lafwind/local/apps/Laf_gVim/share/vim/vim74"
 source $VIMRUNTIME/vimrc_example.vim
 "source $VIMRUNTIME/mswin.vim
 "behave mswin
@@ -10,7 +11,8 @@ set laststatus=2
 set history=10000
 set go= "no toolbar and so on
 
-filetype on
+filetyp on
+filetype indent on
 filetype plugin on
 
 "Indent
@@ -73,11 +75,11 @@ au VimResized * exe "normal! \<c-w>="
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable "Enable syntax hl
 
-set guifont=Source\ Code\ Pro\ 8.99 "Source\ Code\ Pro\ 8.99 "Inconsolata\ 12.9 Monaco\ 8.9 Anonymous\ Pro\ 10.99 monofur\ 11.9 DejaVu\ Sans\ Mono\ 10.6  Ubuntu\ Mono\ 10.9 Lucida\ Console\ 11.6  Meslo\ LG\ S\ 10.99 Cosmic\ Sans\ Neue\ Mono\ 9.9 hermit\ 9.66  Linux下面使用
+set guifont=Monaco\ 8.99 "Source\ Code\ Pro\ 8.99 "Inconsolata\ 12.9 Monaco\ 8.9 Anonymous\ Pro\ 10.99 monofur\ 11.9 DejaVu\ Sans\ Mono\ 10.6  Ubuntu\ Mono\ 10.9 Lucida\ Console\ 11.6  Meslo\ LG\ S\ 10.99 Cosmic\ Sans\ Neue\ Mono\ 9.9 hermit\ 9.66  Linux下面使用
 "set linespace=3 " for Anonymous Pro
 "set linespace=-2 " for Anonymous Pro
 "set linespace=-2 " for Source Code Pro
-set linespace=-2 " for  hermit
+"set linespace=-2 " for  hermit
 "
 "set guifont=Bitstream_Vera_Sans_Mono:h11:cANSI "Windos下面使用
 "set gfw=Microsoft_YaHei:h12:cGB2312
@@ -98,11 +100,12 @@ if has('gui_running')
     colorscheme Lafwind_Night
     "colorscheme Lafwind_Day
     "colorscheme Lafwind_Night_Ver2
-    'colorscheme Lafwind_Night_Ver3
+    "colorscheme Lafwind_Night_Ver3
     "colorscheme Lafwind_Night_Ver4
     "colorscheme Lafwind_Night_Ver2_light
     "colorscheme Lafwind_Green
     "colorscheme Lafwind_Ocean
+    "colorscheme molokai
 else
     colorscheme Lafwind_Night_Term_Ver2
     "colorscheme Lafwind_Night_Term
@@ -209,7 +212,7 @@ Plugin 'SirVer/ultisnips'
 
 
 "File Searching
-Plugin 'ctrlp.vim'
+Plugin 'kien/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
 "Plugin 'Lokaltog/powerline'
 Plugin 'szw/vim-ctrlspace'
@@ -250,7 +253,8 @@ Plugin 'kchmck/vim-coffee-script'
 
 " HTML $ CSS
 Plugin 'mattn/emmet-vim'
-Plugin 'bitfyre/vim-indent-html'
+"Plugin 'bitfyre/vim-indent-html'
+Plugin 'othree/html5.vim'
 
 "Scheme & Racket
 Plugin 'wlangstroth/vim-racket'
@@ -274,7 +278,7 @@ Plugin 'tpope/vim-fugitive'
  "Plugin 'fuenor/vim-statusline'
  "Plugin 'millermedeiros/vim-statline'
  "Plugin 'TagHighlight' "highlight more
- "Plugin 'fcitx.vim'
+ Plugin 'fcitx.vim'
 
 
 
@@ -418,10 +422,10 @@ noremap <silent>,ss :Startify<CR>
 
 nnoremap <A-m> :mkview<CR>
 nnoremap <A-l> :loadview<CR>
-inoremap <C-h> <Left>
+inoremap <C-b> <Left>
 inoremap <C-j> <Down>
 inoremap <C-k> <Up>
-inoremap <C-l> <Right>
+inoremap <C-f> <Right>
 vnoremap <A-h> y/<C-R>=escape(@",'\\/.*$^~[]')<CR><CR>
 
 
@@ -453,7 +457,7 @@ vnoremap > >gv
 "cnoremap <Tab> <c-f>
 
 
-cd /home/lafwind/Projects
+cd /home/lafwind/projects
 
 let g:bufExplorerSplitBelow=1        " Split new window below current.
 
@@ -592,9 +596,16 @@ set errorformat=\[ERROR]\ %f:[%l\\,%v]\ %m
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "indentLine_yggdroot
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let g:indentLine_char='┆'
+if has('gui_running')
+  let g:indentLine_char="┆"
+else
+  let g:indentLine_char="¦"
+endif
 
-
+let g:indentLine_color_term = 239
+"let g:indentLine_color_gui = '#A4E57E'
+let g:indentLine_color_tty_light = 7
+let g:indentLine_color_dark = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 "syntastic
@@ -983,11 +994,20 @@ hi CtrlSpaceStatus   ctermfg=230  guifg=#ffffd7 ctermbg=234   guibg=#1c1c1c cter
 """"""""""""""""""""""""
 """vim-airline
 """"""""""""""""""""""""
-let g:airline#extensions#tabline#enabled = 1
-"let g:airline#extensions#tabline#left_sep = ' '
-"let g:airline#extensions#tabline#left_alt_sep = '|'
+"let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#left_alt_sep = '|'
 
 let g:airline_powerline_fonts = 1
+
+"if !exists('g:airline_symbols')
+"    let g:airline_symbols = {}
+"endif
+"let g:airline_symbols.space = "\ua0"
+"set fillchars+=stl:\ ,stlnc:\
+"set ambiwidth=double
+"set noshowmode
+let g:airline_theme='tomorrow'
 
 
 let g:html_indent_inctags = "html,body,head,tbody"
@@ -999,3 +1019,6 @@ let g:html_indent_inctags = "small, span, strong, sub, sup, table, textarea, tit
 let g:html_indent_inctags = "area, article, aside, audio, bdi, canvas, command, datalist, details, embed"
 let g:html_indent_inctags = "figure, footer, header, group, keygen, mark, math, meter, nav, output"
 let g:html_indent_inctags = "progress, ruby, section, svg, texture, time, video, wbr, text"
+
+let g:molokai_original = 1
+let g:rehash256 = 1
