@@ -1022,3 +1022,5 @@ let g:html_indent_inctags = "progress, ruby, section, svg, texture, time, video,
 
 let g:molokai_original = 1
 let g:rehash256 = 1
+
+let g:indentLine_noConcealCursor=""
