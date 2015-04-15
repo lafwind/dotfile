@@ -112,15 +112,64 @@ if ! shopt -oq posix; then
     . /etc/bash_completion
   fi
 fi
-export PATH=$HOME/local/bin:$PATH
-export PATH=/usr/local/apps:$PATH
 
-export CATALINA_HOME=/usr/local/development_env/apache-tomcat-7.0.47
-export JDK_HOME=/usr/local/development_env/java/
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
 
-### Added by the Heroku Toolbelt
-export PATH="/usr/local/heroku/bin:$PATH"
+# rbenv
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-eval $(dircolors -b $HOME/.dircolors)
-eval $(dircolors -b $HOME/.dircolors)
+# chinese input method in gvim
+export XMODIFIERS="@im=fcitx"
+export QT_IM_MODULE=xim
+export GTK_IM_MODULE=xim
+
+# tmux
+alias tmux="tmux -2"
+# end
+
+# For Vim
+alias vi="/home/lafwind/local/apps/Laf_gVim/bin/vim"
+# end
+
+
+# For jvm || jdk
+# export JAVA_HOME=/usr/local/lib/jvm/jdk1.8.0_31
+export JAVA_HOME=/home/lafwind/local/lib/jvm/jdk1.8.0_31
+export PATH=$JAVA_HOME/bin:$PATH
+export CLASSPATH=.$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar
+# end
+
+# For Android Studio
+export Android_Studio_Path=/home/lafwind/local/apps/android-studio
+export PATH=$Android_Studio_Path/bin:$PATH
+# end
+
+# For Android
+export ANDROID_HOME=/home/lafwind/local/lib/Android/Sdk
+export PATH=$ANDROID_HOME/platform-tools:$ANDROID_HOME/tools:$PATH
+# end
+
+# For Node
+export PATH=/home/lafwind/local/bin/node/bin:$PATH
+export NODE_PATH=/home/lafwind/local/bin/node:/home/lafwind/local/bin/node/lib/node_modules
+# end
+
+# For Haskell
+PATH=~/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:$PATH
+PATH=~/.cabal/bin:/opt/cabal/1.20/bin:/opt/ghc/7.8.4/bin:$PATH
+# end
+
+# For dircolors
+eval `dircolors ~/local/software_src/dircolors/dircolors-solarized/dircolors.ansi-light`
+# end
+
+# For redis
+PATH=/home/lafwind/local/bin/redis-3.0.0/src:$PATH
+# end
+
+# For emacs
+export XLIB_SKIP_ARGB_VISUALS=1
+export NO_AT_BRIDGE=1
+alias emacs="export LC_CTYPE=zh_CN.UTF-8;emacs";
+#
