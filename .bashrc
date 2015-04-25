@@ -173,3 +173,7 @@ export XLIB_SKIP_ARGB_VISUALS=1
 export NO_AT_BRIDGE=1
 alias emacs="export LC_CTYPE=zh_CN.UTF-8;emacs";
 #
+
+# For NDK
+export PATH=/home/lafwind/local/lib/Android/android-ndk-r10d:$PATH
+#
