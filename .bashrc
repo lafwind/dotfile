@@ -172,6 +172,8 @@ PATH=/home/lafwind/local/bin/redis-3.0.0/src:$PATH
 export XLIB_SKIP_ARGB_VISUALS=1
 export NO_AT_BRIDGE=1
 alias emacs="export LC_CTYPE=zh_CN.UTF-8;emacs";
+PATH=/home/lafwind/local/bin:$PATH
+PATH=/home/lafwind/local/share/applications:$PATH
 #
 
 # For NDK
