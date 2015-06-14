@@ -1,0 +1,48 @@
+
+;; ----- smex-history -----
+(
+ web-mode
+ package-install
+ set-fill-column
+ package-refresh-contents
+ helm-find-files
+ package-autoremove
+ fringe-mode
+)
+
+;; ----- smex-data -----
+(
+ (package-menu-mode . 2)
+ (package-install . 40)
+ (dired . 1)
+ (coffee-watch . 2)
+ (coffee-mode-menu . 1)
+ (coffee-compile-buffer . 1)
+ (load-theme . 2)
+ (shell . 4)
+ (customize-themes . 1)
+ (customize-variable . 3)
+ (customize-group . 8)
+ (load-file . 6)
+ (run-lisp . 1)
+ (run-geiser . 7)
+ (electric-pair-mode . 2)
+ (package-autoremove . 2)
+ (neotree-show . 1)
+ (neotree . 2)
+ (package-refresh-contents . 6)
+ (project-explorer-open . 2)
+ (toggle-truncate-lines . 3)
+ (fringe-mode . 11)
+ (set-fringe-style . 1)
+ (flymake-mode . 4)
+ (flymake-goto-next-error . 1)
+ (neotree-mode . 1)
+ (select-frame . 1)
+ (customize . 1)
+ (projectile-mode . 1)
+ (helm-find-files . 1)
+ (set-fill-column . 1)
+ (web-mode . 7)
+ (web-mode-enable . 1)
+)

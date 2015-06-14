@@ -1,0 +1,195 @@
+;;; -*- coding: utf-8 -*-
+
+;; ----- ido-last-directory-list -----
+(
+ ("/home/lafwind/projects/ruby/open_source/" . "weixin_rails_middleware_example/")
+ ("/home/lafwind/Documents/" . "毕设/")
+ ("/home/lafwind/projects/ruby/my_apps/share_link/app/assets/" . "stylesheets/")
+ ("/home/lafwind/projects/ruby/my_apps/share_link/" . "app/")
+ ("~/projects/ruby/" . "LeetCode/")
+ ("/home/lafwind/projects/open_source/" . "lina/")
+ ("/home/lafwind/projects/Android/" . "jni/")
+ ("/home/lafwind/projects/ruby/my_apps/share_link/app/" . "controllers/")
+ ("/home/lafwind/.emacs.d/elpa/" . "neotree-20150408.1802/")
+ ("/home/lafwind/projects/LeetCode/" . "sql/")
+ ("/home/lafwind/projects/ruby/Minial_HTTP_Server_in_Ruby/" . "public/")
+ ("/" . "home/")
+ ("/home/" . "lafwind/")
+ ("/home/lafwind/projects/" . "Android/")
+ ("/home/lafwind/.emacs.d/" . "elpa/")
+ ("/home/lafwind/projects/ruby/my_apps/" . "impage/")
+ ("/home/lafwind/projects/ruby/" . "my_apps/")
+ ("/home/lafwind/" . "projects/")
+)
+
+;; ----- ido-work-directory-list -----
+(
+ "/home/lafwind/projects/ruby/my_apps/impage/"
+ "/home/lafwind/projects/Android/jni/"
+ "/home/lafwind/projects/ruby/open_source/weixin_rails_middleware_example/"
+ "/home/lafwind/Documents/毕设/"
+ "/home/lafwind/projects/ruby/my_apps/share_link/app/controllers/"
+ "/home/lafwind/projects/notes/"
+ "/home/lafwind/.emacs.d/"
+ "/home/lafwind/projects/ruby/my_apps/share_link/"
+ "/home/lafwind/projects/ruby/my_apps/share_link/app/assets/stylesheets/"
+ "~/projects/ruby/LeetCode/"
+ "~/projects/open_source/lina/"
+ "/home/lafwind/projects/open_source/lina/"
+ "/home/lafwind/projects/ruby/LeetCode/"
+ "/home/lafwind/projects/LeetCode/sql/"
+ "/home/lafwind/"
+ "/home/lafwind/projects/ruby/"
+ "/home/lafwind/.emacs.d/elpa/neotree-20150408.1802/"
+ "/home/lafwind/projects/lisp/"
+ "/home/lafwind/projects/"
+ "/home/lafwind/.emacs.d/elpa/subatomic-theme-20150408.253/"
+ "/home/lafwind/projects/coffee_script/"
+ "/home/lafwind/projects/ruby/Minial_HTTP_Server_in_Ruby/public/"
+ "/home/lafwind/projects/ruby/ruby_notes/"
+ "/home/lafwind/projects/ruby/my_apps/todo_list/"
+)
+
+;; ----- ido-work-file-list -----
+(
+ "Gemfile"
+ "binder.c"
+ "config.ru"
+ "paper.md"
+ "static_pages_controller.rb"
+ "application_controller.rb"
+ "README.md"
+ "init.el"
+ "links_controller.rb"
+ "rails.markdown"
+)
+
+;; ----- ido-dir-file-cache -----
+(
+ ("/home/lafwind/projects/my_blog/blog/source/posts/" (21882 55976 594969 513000) "2015-04-13-the-object-model-of-ruby-3.html.markdown~" "2014-05-06-Hello-World.html.markdown" ".2015-04-13-the-object-model-of-ruby-3.html.markdown.un~" "2015-03-12-arbor-day.html.markdown" ".2015-04-10-the-object-model-of-ruby-1.html.markdown.un~" "../" "./" "2015-06-11-my-tools.html.markdown~" ".2015-06-05-two-ways-of-building-rails-app.html.markdown.un~" "2015-06-05-two-ways-of-building-rails-app.html.markdown~" "2015-03-15-contributing-to-open-source-on-github.html.markdown" "2015-04-10-the-object-model-of-ruby-1.html.markdown~" "2015-06-09-thinking-in-life-20150609.html.markdown" ".2015-06-11-my-tools.html.markdown.un~" "2015-04-10-the-object-model-of-ruby-1.html.markdown" "2015-06-11-my-tools.html.markdown" "2015-03-14-thinking-in-css.html.markdown" "2015-06-05-two-ways-of-building-rails-app.html.markdown" "2015-04-10-the-object-model-of-ruby.html.markdown~" "2015-06-07-rust.html.markdown" ".2015-04-11-the-object-model-of-ruby-2.html.markdown.un~" ".2015-04-10-the-object-model-of-ruby.html.markdown.un~" "2015-04-13-the-object-model-of-ruby-3.html.markdown" "2015-04-11-the-object-model-of-ruby-2.html.markdown~" "2015-04-11-the-object-model-of-ruby-2.html.markdown")
+
+ ("/home/lafwind/projects/ruby/my_apps/impage/" (21845 22975 359395 771000) "public/" "tmp/" "../" "./" "Gemfile" "db/" "Gemfile~" "app/" "README.rdoc" "Rakefile" "config/" "lib/" "..gitignore.un~" "bin/" "vendor/" "test/" "log/" "config.ru" ".Gemfile.un~" ".git/" "Gemfile.lock" ".gitignore~" ".gitignore")
+
+ ("/home/lafwind/projects/ruby/my_apps/" (21844 23320 743589 346000) "todo_list/" "../" "./" "impage/" "simple_weixin_app/" "share_link/")
+
+ ("/home/lafwind/projects/" (21860 31324 910582 306000) "my_blog/" "../" "./" "redis/" "open_source/" "ionic/" "nodejs/" "ruby/" "notes/" "Android/" "angularJs/" "chrome_app/" "lisp/" "LeetCode/" "coffee_script/")
+
+ ("/home/lafwind/projects/Android/jni/" (21849 20141 295340 760000) ".trace.c.un~" "trace.c~" "../" "./" "binder.c" "hello/" "my_ptrace/")
+
+ ("/home/lafwind/projects/Android/" (21849 20087 299342 690000) "inj.zip" "../" "./" "MessageSender/" "LibInject.zip" "HappyPig/" "HappyDog/" "h/" "LibInject/" "ptrace-for-android/" "trace.c" "jni/" "myptrace.c")
+
+ ("/home/lafwind/projects/ruby/open_source/weixin_rails_middleware_example/" (21841 59912 622667 382000) "public/" "tmp/" "../" "./" "Gemfile" "db/" "app/" "Rakefile" "config/" "lib/" "bin/" "vendor/" "test/" "log/" "config.ru" ".git/" "Gemfile.lock" "README.md" ".gitignore")
+
+ ("/home/lafwind/projects/ruby/open_source/" (21841 59671 90673 937000) "weixin_rails_middleware_example/" "../" "./")
+
+ ("/home/lafwind/projects/ruby/" (21841 59665 378674 92000) "try.rb" "Minial_HTTP_Server_in_Ruby/" "../" "./" "open_source/" "ruby_notes/" "game_of_life/" "rails_template/" "my_apps/" "try.rb~" ".try.rb.un~" "my_gem/" "LeetCode/")
+
+ ("/home/lafwind/" (21841 61222 246631 842000) "Desktop/" ".thumbnails/" ".vimrc~" ".tmux.conf~" ".ghc/" "..zpreztorc.un~" "Templates/" ".bashrc~" ".python_history" ".gnome/" ".bash_history" ".gradle/" ".rbenv/" "Documents/" ".zpreztorc~" ".vimperator/" ".zsh-update" ".npm/" "..emacs.un~" ".oh-my-zsh/" ".ICEauthority" ".bash_profile" ".netrc" ".dmrc" ".zprofile" "../" "./" ".cabal/" ".zshrc.orig" ".gnome2_private/" ".nvimrc" "Movies&Dramas/" ".viminfo" "Downloads/" ".devdocs-d66cada7e0b4bf9e00f6b8b9e3ff0f9d/" ".Xauthority" "Videos/" ".zshrc-backup-for-oh-my-zsh" ".plugman/" ".kingsoft/" ".zcompdump.zwc" ".rediscli_history" ".profile~" ".ngrok2/" ".guard_history" "..tmux.conf.un~" ".zcompdump-song-5.0.2" ".config/" ".AndroidStudio/" "AndroidStudioProjects/" ".java/" "projects/" ".emacs~" ".zshrc-backup-for-prezto" ".bashrc" ".zsh_history" "..profile.un~" ".profile" ".adobe/" ".gitconfig" ".cache/" ".pam_environment" ".nvimlog" ".NERDTreeBookmarks" "bin/" ".xinput.d/" ".gnupg/" ".xsession-errors.old" ".gconf/" ".mkshrc" ".coffee_history" ".zshrc~" ".zcompdump" ".local/" ".emacs.d/" ".gem/" "local/" ".zlogin" ".psql_history" ".zlogout" "..vimrc.un~" ".heroku/" "dump.rdb" ".zshrc" ".android/" "..zshrc.un~" "Music/" "dwhelper/" "books/" ".macromedia/" "..bashrc.un~" "Pictures/" ".nviminfo" ".gvfs/" ".vim/" ".xsession-errors" ".nvim/" ".gnome2/" ".lesshst" ".pki/" ".zpreztorc" "Public/" ".ionic/" ".bash_logout" ".cordova/" ".zshenv" ".vimrc" ".mozilla/" ".tmux.conf" ".vimperatorrc" ".geiser_history.guile" ".fonts/" ".xinputrc" ".dbus/")
+
+ ("/home/lafwind/Documents/毕设/" (21841 40818 566781 742000) "../" "./" "毕业设计进度报告_111220055_李高峰.pdf" "中期报告.doc" ".#paper.md" "paper.doc" "2011cs1425968637.doc" "毕业设计进度报告_111220055_李高峰.doc")
+
+ ("/home/lafwind/projects/ruby/my_apps/share_link/app/assets/stylesheets/" (21840 52645 930666 777000) "custom.css.scss~" "../" "./" "comments.css.scss" "static_pages.css.scss" "custom.css.scss" ".custom.css.scss.un~" "users.css.scss" "sessions.css.scss" "application.css" "links.css.scss")
+
+ ("/home/lafwind/.emacs.d/" (21841 39602 158814 752000) "project-explorer-cache/" ".init.el.un~" "init.el~" "../" "./" "init.el" "..gitignore.un~" "elpa/" "ido.last" "projectile-bookmarks.eld" "themes/" "auto-save-list/" ".mc-lists.el" "smex-items" ".git/" "custom.el" ".gitignore~" ".gitignore")
+
+ ("/home/lafwind/projects/ruby/my_apps/share_link/app/controllers/" (21840 51195 266706 145000) "application_controller.rb~" ".application_controller.rb.un~" "application_controller.rb" "sessions_controller.rb" "../" "./" "static_pages_controller.rb" "comments_controller.rb~" "links_controller.rb" "users_controller.rb" "comments_controller.rb" "concerns/" ".comments_controller.rb.un~")
+
+ ("/home/lafwind/Documents/" (21840 52285 422676 560000) "../" "./" "答辩.ppt" "lc/" "毕设/")
+
+ ("/home/lafwind/projects/ruby/my_apps/share_link/app/views/static_pages/" (21839 22806 495349 619000) "../" "./" "home.html.erb" "about.html.erb")
+
+ ("/home/lafwind/projects/notes/" (21837 58874 707744 775000) "sql.md~" "rails.markdown" ".sql.md.un~" "../" "./" "sicp.scm" "..gitignore.un~" "sql.md" "README.md~" ".git/" ".README.md.un~" "README.md" ".gitignore~" ".gitignore")
+
+ ("/home/lafwind/projects/ruby/my_apps/share_link/app/views/links/" (21836 54272 91702 676000) "new.html.erb" "../" "./" "show.html.erb" "edit.html.erb" "index.html.erb")
+
+ ("/home/lafwind/projects/ruby/my_apps/share_link/" (21836 50241 359642 194000) "public/" "tmp/" "../" "./" "Gemfile" "db/" "app/" "Rakefile" "config/" "lib/" "bin/" "vendor/" "test/" "log/" "config.ru" ".git/" "Gemfile.lock" "README.md" ".gitignore")
+
+ ("/home/lafwind/projects/ruby/my_apps/share_link/db/" (21836 53098 275685 63000) "migrate/" "schema.rb" "seeds.rb" "../" "./" "test.sqlite3" "development.sqlite3")
+
+ ("/home/lafwind/projects/ruby/my_apps/share_link/db/migrate/" (21836 52916 111682 329000) "../" "./" "20141215090021_create_users.rb" "20150111140328_add_sharing_to_links.rb" "20150109141128_add_user_id_to_links.rb" "20141215092633_add_password_digest_to_users.rb" "20141215091903_add_index_to_users_email.rb" "20150112122026_create_comments.rb" "20141217132335_add_remember_digest_to_users.rb" "20150508145652_add_description_to_links.rb" "20150113124934_acts_as_votable_migration.rb" "20150109135642_create_links.rb")
+
+ ("/home/lafwind/projects/ruby/my_apps/share_link/app/views/sessions/" (21833 52797 787759 810000) "new.html.erb" "../" "./")
+
+ ("/home/lafwind/projects/ruby/my_apps/share_link/app/assets/" (21708 64685 66178 240000) "stylesheets/" "../" "./" "images/" "javascripts/")
+
+ ("/home/lafwind/projects/ruby/my_apps/share_link/app/views/" (21708 64685 66178 240000) "links/" "static_pages/" "../" "./" "layouts/" "sessions/" "users/" "shared/")
+
+ ("/home/lafwind/.emacs.d/elpa/" (21832 57172 47654 73000) "async-20150412.2207/" "solarized-theme-20150414.836/" "robe-20150222.1644/" "smex-20141210.1422/" "twilight-anti-bright-theme-20140810.34/" "inflections-20121016.157/" "ruby-compilation-20140620.217/" "js2-mode-20150406.1341/" "dash-20150311.2355/" "git-commit-mode-20150330.1048/" "ample-theme-20150210.802/" "neotree-20150408.1802/" "inf-ruby-20150403.946/" "web-mode-20150503.931/" "smartparens-20150409.923/" "flx-20140921.739/" "git-rebase-mode-20150122.1114/" "coffee-mode-20150318.1623/" "../" "./" "projectile-20150416.1401/" "highlight-indentation-20150307.208/" "company-inf-ruby-20140805.1354/" "names-20150125.552/" "flycheck-20150412.242/" "aggressive-indent-20150401.1516/" "paredit-20150217.713/" "fill-column-indicator-20140509.1101/" "es-lib-20141111.1030/" "indent-guide-20150224.206/" "color-theme-sanityinc-tomorrow-20150328.1259/" "flatland-theme-20140805.305/" "epl-20150326.1212/" "markdown-mode-20150121.1229/" "pkg-info-20140610.630/" "magit-20150411.1731/" "expand-region-20150414.908/" "es-windows-20140211.104/" "subatomic-theme-20150408.253/" "multiple-cursors-20150307.2322/" "evil-nerd-commenter-20150330.151/" "company-readme.txt" "base16-theme-20150127.1939/" "company-20150405.1148/" "twilight-theme-20120412.603/" "gnupg/" "rinari-20150331.1208/" "sql-indent-20090325.2254/" "sublime-themes-20150328.131/" "flx-ido-20140821.2033/" "findr-20130824.1207/" "geiser-20150311.1918/" "archives/" "helm-20150419.2148/" "jump-20130702.33/")
+
+ ("/home/lafwind/.emacs.d/elpa/web-mode-20150503.931/" (21832 57173 367654 93000) "web-mode-autoloads.el" "web-mode.elc" "../" "./" "web-mode-pkg.el" "web-mode.el")
+
+ ("/home/lafwind/projects/ruby/my_apps/share_link/config/" (21832 42487 283672 894000) "application.rb" "environment.rb" "locales/" "../" "./" "initializers/" "secrets.yml" "environments/" "boot.rb" "routes.rb" "database.yml")
+
+ ("~/projects/ruby/LeetCode/" (21828 48002 67614 636000) "../" "./" ".int_to_roman.rb.un~" "..gitignore.un~" "int_to_roman.rb" "int_to_roman.rb~" ".git/" ".gitignore")
+
+ ("~/projects/ruby/" (21813 14515 519690 976000) "try.rb" "Minial_HTTP_Server_in_Ruby/" "../" "./" "ruby_notes/" "game_of_life/" "rails_template/" "my_apps/" "try.rb~" ".try.rb.un~" "my_gem/" "LeetCode/")
+
+ ("~/projects/ruby/rails_template/" (21787 32310 731298 668000) "public/" "tmp/" "../" "./" "Gemfile" "db/" "app/" "README.rdoc" "Rakefile" "config/" "lib/" "bin/" "vendor/" "test/" "log/" "config.ru" "Gemfile.lock" ".gitignore")
+
+ ("/home/lafwind/projects/ruby/rails_template/" (21787 32310 731298 668000) "public/" "tmp/" "../" "./" "Gemfile" "db/" "app/" "README.rdoc" "Rakefile" "config/" "lib/" "bin/" "vendor/" "test/" "log/" "config.ru" "Gemfile.lock" ".gitignore")
+
+ ("/home/lafwind/projects/ruby/my_gem/" (21766 63439 799282 493000) "../" "./" "open_weather_map/" "weather_info/")
+
+ ("/home/lafwind/projects/open_source/lina/lib/" (21775 48108 99418 834000) "../" "./" "tasks/" "lina.rb" "generators/" "lina/")
+
+ ("/home/lafwind/projects/open_source/lina/lib/lina/" (21775 48108 99418 834000) "engine.rb" "schema.rb" "../" "./" "error.rb" "tree.rb" "rails/" "version.rb")
+
+ ("~/projects/open_source/lina/" (21775 48984 347387 512000) "lina.gemspec" "gemfiles/" "MIT-LICENSE" "../" "./" "Gemfile" "app/" "Rakefile" "lina-logo.png" "config/" "lib/" "bin/" "Appraisals" ".travis.yml" "test/" ".git/" "Gemfile.lock" "README.md" ".gitignore")
+
+ ("/home/lafwind/projects/open_source/lina/" (21775 48984 347387 512000) "lina.gemspec" "gemfiles/" "MIT-LICENSE" "../" "./" "Gemfile" "app/" "Rakefile" "lina-logo.png" "config/" "lib/" "bin/" "Appraisals" ".travis.yml" "test/" ".git/" "Gemfile.lock" "README.md" ".gitignore")
+
+ ("/home/lafwind/projects/open_source/" (21775 48099 587419 138000) "active_service/" "simple-module/" "../" "./" "SeventeenMon/" "ruby-style-guide/" "devdocs/" "edp-build-fontmin-demo/" "PttChrome/" "lina/")
+
+ ("/home/lafwind/projects/ruby/LeetCode/" (21828 48002 67614 636000) "../" "./" ".int_to_roman.rb.un~" "..gitignore.un~" "int_to_roman.rb" "int_to_roman.rb~" ".git/" ".gitignore")
+
+ ("/home/lafwind/projects/angularJs/" (21738 63891 699393 72000) "../" "./" "hello_angularjs/" "github_detail/")
+
+ ("/home/lafwind/projects/Android/ptrace-for-android/" (21818 10371 839632 894000) "ipaddr/" "MyListView/" "syscallents_x86.h" "defs.h" "blockChanges/" "../" "./" "syscallents_x86_64.h" "parser/" "TODO" "syscallents_arm.h" "syscall_dump.log" "syscall_interpret.h" "Readme.docx" ".git/" "README.md" "main.c" "myptrace.h")
+
+ ("/home/lafwind/projects/LeetCode/lib/" (21816 62743 139639 528000) "reverse_bits.rb~" ".two_sum.rb.un~" "hamming_weight.rb" ".inorder_traversal.rb.un~" "trailing_zeroes.rb~" "inorder_traversal.rb" "reverse_bit.rb~" ".length_of_longest_substring.rb.un~" "../" "./" ".reverse_integer.rb.un~" "length_of_longest_substring.rb" ".add_two_numbers.rb.un~" ".int_to_roman.rb.un~" "reverse_integer.rb~" "inorder_traversal.rb~" ".trailing_zeroes.rb.un~" "hamming_weight.rb~" "rotate_array.rb~" "add_two_numbers.rb~" "int_to_roman.rb" "add_two_numbers.rb" ".reverse_bit.rb.un~" "rotate_array.rb" "reverse_integer.rb" "reverse_bits.rb" "trailing_zeroes.rb" "two_sum.rb~" "int_to_roman.rb~" ".reverse_bits.rb.un~" "two_sum.rb" ".reverse_bit.rb.swp" ".hamming_weight.rb.un~" ".rotate_array.rb.un~" "length_of_longest_substring.rb~")
+
+ ("/home/lafwind/projects/LeetCode/sql/" (21815 42427 411661 964000) ".rising_temperature.sql.un~" "combine_two_table.sql" "customers_who_never_order.sql~" "nth_highest_salary.sql" "employees_earning_more_than_their_managers.sql" "../" "./" "delete_duplicate_email.sql~" "department_highest_salary.sql" "consecutive_numbers.sql" "duplicate_emails.sql" ".delete_duplicate_email.sql.un~" "rising_temperature.sql~" "delete_duplicate_email.sql" ".customers_who_never_order.sql.un~" "second_highest_salary.sql" "rising_temperature.sql" "department_top_three_salaries.sql" "rank_scores.sql" "customers_who_never_order.sql")
+
+ ("/home/lafwind/.emacs.d/elpa/neotree-20150408.1802/" (21813 5672 895630 458000) "neotree-autoloads.el" "neotree-pkg.el" "../" "./" "icons/" "neotree.elc" "neotree.el")
+
+ ("/home/lafwind/projects/ruby/my_apps/share_link/app/models/" (21815 34124 651605 141000) "comment.rb" "../" "./" ".keep" "concerns/" ".#user.rb" "link.rb" "user.rb")
+
+ ("/home/lafwind/projects/ruby/my_apps/share_link/app/" (21708 64685 66178 240000) "models/" "views/" "../" "./" "assets/" "controllers/" "mailers/" "helpers/")
+
+ ("/home/lafwind/projects/lisp/" (21812 63891 351648 44000) "hello_world.scm" "../" "./")
+
+ ("/home/lafwind/projects/ionic/" (21713 60289 795302 405000) "../" "./" "my_apps/" "examples/")
+
+ ("/home/lafwind/.emacs.d/elpa/sql-indent-20090325.2254/" (21811 28325 107215 348000) "sql-indent.elc" "../" "./" "sql-indent.el" "sql-indent-autoloads.el" "sql-indent-pkg.el")
+
+ ("/home/lafwind/.emacs.d/elpa/subatomic-theme-20150408.253/" (21806 39630 527776 359000) "subatomic-theme-autoloads.el" "subatomic-theme.el" "../" ".subatomic-theme.el.un~" "./" "subatomic-theme-pkg.el" "subatomic-theme.el~" "subatomic-theme.elc")
+
+ ("/home/lafwind/.emacs.d/themes/" (21806 39689 351777 242000) "noctilux-definitions.el" "../" "./" "noctilux-theme.el" "molokai-theme-kit.el" "color-theme-sanityinc-tomorrow.el" "zenburn-theme.el" "monokai-theme.el" "molokai-theme.el")
+
+ ("/home/lafwind/projects/coffee_script/" (21807 32950 3884 868000) ".hello_coffee.coffee.un~" "hello_coffee.coffee~" "../" "./" "hello_coffee.js" "5Mul5/" "hello_coffee.coffee")
+
+ ("/home/lafwind/projects/redis/" (21788 60840 635247 806000) "../" "./" "redis-3.0-annotated/")
+
+ ("/home/lafwind/projects/redis/redis-3.0-annotated/" (21788 60870 743247 235000) "runtest" "README.rst" "redis.conf" "MANIFESTO" "COPYING" "deps/" "../" "./" "sentinel.conf" "runtest-cluster" "utils/" "runtest-sentinel" "BUGS" "INSTALL" "README" ".git/" "tests/" "Makefile" "CONTRIBUTING" "src/" ".gitignore" "00-RELEASENOTES")
+
+ ("/home/lafwind/projects/redis/redis-3.0-annotated/src/" (21788 60870 739247 235000) "dict.h" "sha1.c" "redis.c" "rand.c" "t_string.c" "config.c" "util.c" "scripting.c" "lzf_c.c" "redis-cli.c" "pqsort.c" "rio.c" "zipmap.c" "t_set.c" "pubsub.c" "object.c" "help.h" "t_hash.c" "redis-check-aof.c" "sds.h" "adlist.h" "release.c" "crc64.h" "testhelp.h" "../" "./" "memtest.c" "setproctitle.c" "blocked.c" "valgrind.sup" "ae.c" "ae.h" "fmacros.h" "ae_select.c" "endianconv.c" "ae_kqueue.c" "asciilogo.h" "intset.h" "ae_evport.c" "redis-check-dump.c" "version.h" "db.c" "util.h" "lzf.h" "redisassert.h" "ae_epoll.c" "rdb.h" "sds.c" "mkreleasehdr.sh" "lzfP.h" "endianconv.h" "cluster.c" "sentinel.c" "slowlog.h" "replication.c" "cluster.h" "redis-benchmark.c" "intset.c" "anet.c" "slowlog.c" "redis.h" "bitops.c" "config.h" "t_zset.c" "zmalloc.h" "sha1.h" "Makefile.dep" "lzf_d.c" "rand.h" "networking.c" "solarisfixes.h" "bio.c" "ziplist.c" "hyperloglog.c" "notify.c" "debug.c" "zipmap.h" "syncio.c" "aof.c" "rio.h" "adlist.c" "multi.c" "rdb.c" "zmalloc.c" "pqsort.h" "crc16.c" "Makefile" "bio.h" "redis-trib.rb" "anet.h" "ziplist.h" ".gitignore" "t_list.c" "crc64.c" "sort.c" "dict.c")
+
+ ("/home/lafwind/Pictures/" (21799 53316 507883 78000) "Screenshot from 2015-02-06 00:37:46.png" "Screenshot from 2015-02-03 03:10:26.png" "Screenshot from 2015-02-06 00:38:54.png" "../" "./" "heart-159636_640.png" "Photo-Filter-Mountains.jpg" "Screenshot from 2015-02-14 03:52:20_modified.png" "papers.co-mg92-night-sky-wide-mountain-star-shining-nature-22-wallpaper.jpg" "Screenshot from 2015-02-06 23:22:39.png" "Screenshot from 2015-02-06 23:24:43.png" "Screenshot from 2015-02-06 23:22:53.png" "Screenshot from 2015-02-06 00:43:06.png" "favicon.png" "Screenshot from 2015-02-06 23:23:51.png" "Screenshot from 2015-02-06 23:24:56.png" "Screenshot from 2015-04-09 21:25:00.png" "Screenshot from 2015-02-06 23:24:51.png")
+
+ ("/home/lafwind/.emacs.d/auto-save-list/" (21807 30282 319844 839000) "../" "./" ".saves-21282-song~")
+
+ ("/home/lafwind/projects/ruby/Minial_HTTP_Server_in_Ruby/public/" (21786 28288 983117 1000) "../" "./" "index.html")
+
+ ("/home/lafwind/projects/ruby/ruby_notes/" (21782 47092 647378 172000) "Guardfile" ".Guardfile.un~" "../" "./" "Gemfile" "Gemfile~" "lib/" "..gitignore.un~" "test/" ".Gemfile.un~" ".git/" "Guardfile~" "Gemfile.lock" ".gitignore~" ".gitignore")
+
+ ("/home/lafwind/projects/ruby/Minial_HTTP_Server_in_Ruby/" (21787 64726 643143 406000) "public/" "index.html~" ".index.html.un~" "../" "./" "..gitignore.un~" ".git/" ".web_server.rb.un~" "web_server.rb~" ".gitignore" "web_server.rb")
+
+ ("/home/" (21798 10206 467304 935000) "../" "./" "lafwind/")
+
+ ("/home/lafwind/projects/LeetCode/" (21805 6317 732322 130000) "Guardfile" "../" "./" "Gemfile" ".int_to_roman.rb.un~" "lib/" "sql/" "..gitignore.un~" "test/" "int_to_roman.rb~" ".Gemfile.un~" ".git/" "Gemfile.lock" ".gitignore~" ".gitignore")
+
+ ("/home/lafwind/projects/ruby/my_apps/todo_list/" (21724 46793 474537 11000) "public/" "../" "./" "Gemfile" "db/" "app/" "README.rdoc" "Rakefile" "config/" "lib/" "bin/" "vendor/" "test/" "log/" "config.ru" ".git/" "Gemfile.lock" ".gitignore")
+)
+
+;; ----- ido-unc-hosts-cache -----
+t
