@@ -75,7 +75,7 @@ au VimResized * exe "normal! \<c-w>="
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 syntax enable "Enable syntax hl
 
-set guifont=Monaco\ 8.99 "Source\ Code\ Pro\ 8.99 "Inconsolata\ 12.9 Monaco\ 8.9 Anonymous\ Pro\ 10.99 monofur\ 11.9 DejaVu\ Sans\ Mono\ 10.6  Ubuntu\ Mono\ 10.9 Lucida\ Console\ 11.6  Meslo\ LG\ S\ 10.99 Cosmic\ Sans\ Neue\ Mono\ 9.9 hermit\ 9.66  Linux下面使用
+set guifont=CamingoCode\ 10 "Source\ Code\ Pro\ 8.99 "Inconsolata\ 12.9 Monaco\ 8.9 Anonymous\ Pro\ 10.99 monofur\ 11.9 DejaVu\ Sans\ Mono\ 10.6  Ubuntu\ Mono\ 10.9 Lucida\ Console\ 11.6  Meslo\ LG\ S\ 10.99 Cosmic\ Sans\ Neue\ Mono\ 9.9 hermit\ 9.66  Anonymous\ Pro\ 10.3 CamingoCode\ 10 Linux下面使用
 "set linespace=3 " for Anonymous Pro
 "set linespace=-2 " for Anonymous Pro
 "set linespace=-2 " for Source Code Pro
@@ -178,13 +178,12 @@ Plugin 'gmarik/Vundle.vim'
 "Plugin 'The-NERD-tree'
 Plugin 'majutsushi/tagbar'
 Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-vinegar'
+" Plugin 'tpope/vim-vinegar'
 " Plugin 'snipMate'
 Plugin 'Yggdroot/indentLine'
 Plugin 'Shougo/neocomplete.vim'
 "Plugin 'Shougo/neocomplcache.vim'
 "Plugin 'javacomplete'
-"Plugin 'Syntastic'
 Plugin 'scrooloose/syntastic'
 "Plugin 'Gundo'
 "Plugin 'sjl/gundo.vim'
@@ -278,7 +277,7 @@ Plugin 'tpope/vim-fugitive'
  "Plugin 'fuenor/vim-statusline'
  "Plugin 'millermedeiros/vim-statline'
  "Plugin 'TagHighlight' "highlight more
- Plugin 'fcitx.vim'
+ "Plugin 'fcitx.vim'
 
 
 
