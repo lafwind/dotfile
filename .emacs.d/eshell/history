@@ -1,0 +1,43 @@
+ls
+ls
+cd
+ls
+ls
+cd projects/
+ls
+ls
+ls
+exit
+ls
+ls
+cd
+ls
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ruby instant_runoff_votting.rb 
+ls
+cd ..
+git status
+git add -A
+git com -am 'Question: Instant_runoff_votting, some werid problem'
+git commit -am 'Question: Instant_runoff_votting, some werid problem'
+ls
