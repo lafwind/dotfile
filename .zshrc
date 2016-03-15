@@ -5,7 +5,9 @@ export ZSH=$HOME/.oh-my-zsh
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="ys"
+
+# ZSH_THEME="ys"
+ZSH_THEME="honukai"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -146,3 +148,20 @@ PATH=/home/lafwind/local/share/applications:$PATH
 # For NDK
 export PATH=/home/lafwind/local/lib/Android/android-ndk-r10d:$PATH
 #
+
+# For nvm
+# export PATH=/home/lafwind/.nvm/versions/io.js/v2.4.0/bin:$PATH
+. /home/lafwind/.nvm/nvm.sh
+#
+
+# For racket
+export PATH=/home/lafwind/local/bin/racket-6.2.1/bin:$PATH
+#
+
+# For exercism
+export PATH=$HOME/local/bin:$PATH
+#
+
+# For emacs 24.5 (compiled by myself)
+# export PATH=$HOME/local/apps/emacs:$PATH
+# alias emacs="export LC_CTYPE=zh_CN.UTF-8;/home/lafwind/local/apps/emacs/bin/emacs &";
