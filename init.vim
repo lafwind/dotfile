@@ -225,7 +225,7 @@ Plugin 'SirVer/ultisnips'
 Plugin 'ctrlpvim/ctrlp.vim'
 Plugin 'Lokaltog/vim-easymotion'
 "Plugin 'Lokaltog/powerline'
-Plugin 'szw/vim-ctrlspace'
+Plugin 'vim-ctrlspace/vim-ctrlspace'
 " Plugin 'L9'
 " Plugin 'FuzzyFinder'
 " Plugin 'ack.vim'
@@ -1101,3 +1101,8 @@ let g:molokai_original = 1
 let g:rehash256 = 1
 
 let g:indentLine_noConcealCursor=""
+
+"Ctrl-Space
+
+let g:CtrlSpaceFileEngine = "auto"
+let g:CtrlSpaceSearchTiming = 500
